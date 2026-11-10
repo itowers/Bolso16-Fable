@@ -10,7 +10,7 @@ Rodados no **Chrome 153 (headless)**. O WebKit do Playwright não pôde ser baix
 
 | Teste | Resultado | Números |
 |---|---|---|
-| T1 Hash de áudio | OK | SHA-256 `0d54cdf5a3928f13…` igual ao golden em 5 execuções seguidas |
+| T1 Hash de áudio | OK | SHA-256 `0d54cdf5a3928f13…` igual ao golden em 3 execuções seguidas |
 | T2 Timing | OK | 33 notas, erro máx **0,930 ms** (limite 1 ms); atraso fixo do limitador 6,5 ms |
 | T3 Polimetria | OK | A (16) e B (12) coincidem no passo 49, erro 0 s |
 | T4 Jitter ao vivo | OK | 30 s, 241 passos, jitter máx **0,0000 ms**, antecedência mín 39,7 ms, 0 passos com menos de 10 ms, shader WebGL ligado |
@@ -29,7 +29,7 @@ Rodados no **Chrome 153 (headless)**. O WebKit do Playwright não pôde ser baix
 | T17 Padrões e cadeia | OK | troca espera o fim; cadeia 16 › 32; esticar duplica; encurtar não perde |
 
 Dois avisos sobre esses números:
-- **T4 falhou uma vez** numa execução anterior (um passo agendado com 7,8 ms de antecedência), antes de eu fazer o teste compilar o shader antes de começar a medir. Depois disso passou em 8 execuções seguidas. Não levei o agendamento para AudioWorklet.
+- **T4 falhou uma vez** numa execução anterior (um passo agendado com 7,8 ms de antecedência), antes de eu fazer o teste compilar o shader antes de começar a medir. Depois disso passou em 7 execuções seguidas. Não levei o agendamento para AudioWorklet.
 - **T2 passa com folga pequena** (0,93 de 1 ms). O erro vem da detecção de ataque no chimbal de ruído, não do agendamento (o T14 mede 0,091 ms com um clique limpo).
 
 ## 3. Cenários manuais
