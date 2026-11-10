@@ -29,9 +29,10 @@ export function montaCasca() {
       el('div', { id: 'linhaRec', hidden: true },
         bt('Desfazer volta', () => { A.aviso(A.rel.desfazVolta() ? 'Volta desfeita' : 'Nada a desfazer'); A.sujo(); A.pinta(); }, { id: 'desfazVolta' }),
         bt('Borracha', () => { A.u.borracha = !A.u.borracha; if (!A.u.borracha) A.rel.tr.borr.clear(); else A.aviso('Segure um pad para apagar'); A.pinta(); }, { id: 'borracha', on: false }),
-        btFill('fillRec'))),
+        btFill('fillRec')),
+      el('div', { id: 'banner', hidden: true })),
     el('main', { id: 'corpo' }), el('section', { id: 'sup', 'aria-label': 'Superfície de tocar' }),
-    el('div', { id: 'folha', hidden: true }), el('div', { id: 'banner', hidden: true }), el('div', { id: 'aviso', role: 'status', hidden: true }));
+    el('div', { id: 'folha', hidden: true }), el('div', { id: 'aviso', role: 'status', hidden: true }));
   heroEl = el('div', { class: 'hero' }, el('canvas', { id: 'ferro', 'aria-hidden': 'true' }), el('div', { class: 'heroTxt' }, el('div', { id: 'heroNome', class: 'heroNome', text: '' }), el('div', { id: 'heroSub', class: 'heroSub', text: '' })),
     el('div', { id: 'faixa25', class: 'faixa25', 'aria-hidden': 'true' }, Array.from({ length: 25 }, (_, i) => el('i', { class: [1, 3, 6, 8, 10].includes(i % 12) ? 'p' : '' }))));
   const sup = $('sup');
@@ -62,6 +63,8 @@ export function pinta() {
   $('rec').setAttribute('aria-pressed', String(rel.rec)); $('play').setAttribute('aria-pressed', String(rel.tocando));
   $('play').replaceChildren(ic(rel.tocando ? 'stop' : 'play')); $('bpmN').textContent = E.bpm;
   $('linhaRec').hidden = !rel.rec; document.querySelector('[data-id=borracha]').setAttribute('aria-pressed', String(u.borracha));
+  const b = $('banner'); b.hidden = !u.armar; b.replaceChildren();
+  if (u.armar) b.append(el('span', { text: u.armar.tipo === 'cadeia' ? 'Toque nos padrões, na ordem' : 'Toque no destino' }), bt(u.armar.tipo === 'cadeia' ? 'Pronto' : 'Cancelar', () => { u.armar = null; pinta(); }, { class: 'txt' }));
   const c = $('corpo'), rol = c.scrollTop; c.replaceChildren();
   if (u.aba === 'tocar') pintaTocar(c); else if (u.aba === 'seq') pintaSequencia(c); else if (u.aba === 'som') pintaSom(c); else pintaBiblioteca(c);
   c.scrollTop = rol;
@@ -75,8 +78,6 @@ export function pinta() {
     pintaFolha(f);
   }
   $('aviso').style.top = (topo + 2) + 'px';
-  const b = $('banner'); b.hidden = !u.armar; b.replaceChildren(); caixa(b);
-  if (u.armar) b.append(el('span', { text: u.armar.tipo === 'cadeia' ? 'Toque nos padrões, na ordem' : 'Toque no destino' }), bt(u.armar.tipo === 'cadeia' ? 'Pronto' : 'Cancelar', () => { u.armar = null; pinta(); }, { class: 'txt' }));
   marcaFill();
 }
 // ---------- Aba Tocar ----------
@@ -258,7 +259,7 @@ function baixa(b, pid) {
   }
 }
 // ---------- Laço de quadro: mostra o que soa agora (lido da fila do relógio) ----------
-let ultCh = '', ultVisor = '', ultPad = -1, ultLim = 0;
+let ultCh = '', ultVisor = '', ultPad = -1, ultLim = -1e9;
 function quadro() {
   requestAnimationFrame(quadro);
   const rel = A.rel, E = A.E, u = A.u, e = rel.tocando ? rel.atual() : null, agora = performance.now();

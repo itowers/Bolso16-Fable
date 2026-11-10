@@ -70,7 +70,7 @@ A.addAmostra = async (dados, sr, nome) => {
   if (A.banco.db) await A.banco.set('amostras', id, r); return id;
 };
 A.delAmostra = async id => { A.amostras.delete(id); if (A.banco.db) await A.banco.del('amostras', id); A.E.kit.sons.forEach(s => { if (s.amostra && s.amostra.id === id) { s.amostra = null; s.fatias = []; s.fonte = 'synth'; } }); A.sujo(); };
-A.usaAmostra = (s, id) => { const som = A.E.kit.sons[s], am = A.amostras.get(id); som.amostra = { id, ini: 0, fim: am.buf.duration, raiz: 60 }; som.fatias = []; if (som.fonte === 'synth') som.fonte = 'amostra'; som.nome = (am.nome || 'Amostra').slice(0, 9); A.sujo(); };
+A.usaAmostra = (s, id) => { const som = A.E.kit.sons[s], am = A.amostras.get(id); som.amostra = { id, ini: 0, fim: am.buf.duration, raiz: 60 }; som.fatias = []; delete som.marcas; if (som.fonte === 'synth') { som.fonte = 'amostra'; Object.assign(som.params, { ftipo: 'lowpass', corte: 18000, res: .7, fEnv: 0, a: .002, r: .05 }); } som.nome = (am.nome || 'Amostra').slice(0, 9); A.sujo(); };
 A.gravaMic = async () => {
   if (A.u.gravando) return A.paraGravacao();
   if (!A.worklet) { A.aviso('Gravação indisponível neste navegador'); return; }

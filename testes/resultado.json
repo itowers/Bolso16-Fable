@@ -1,5 +1,5 @@
 {
- "quando": "2026-11-10T17:19:55.586Z",
+ "quando": "2026-11-10T17:28:04.027Z",
  "navegador": "chrome 153.0.8010.12",
  "ok": 17,
  "total": 17,
@@ -26,7 +26,7 @@
    "id": "T4",
    "nome": "Jitter ao vivo",
    "ok": true,
-   "det": "6 s · 49 passos · jitter máx 0.0000 ms · antecedência mín 31.0 ms · passos com <10 ms: 0 · shader webgl 181 quadros"
+   "det": "30 s · 241 passos · jitter máx 0.0000 ms · antecedência mín 19.4 ms · passos com <10 ms: 0 · shader webgl 901 quadros"
   },
   {
    "id": "T5",
@@ -62,7 +62,7 @@
    "id": "T10",
    "nome": "CPU",
    "ok": true,
-   "det": "8 compassos · 16 sons · 1841 notas com ratchet · 15 FX + fita + dust + inserts: 2811 ms para 16.5 s de áudio = 17.0%"
+   "det": "8 compassos · 16 sons · 1841 notas com ratchet · 15 FX + fita + dust + inserts: 2908 ms para 16.5 s de áudio = 17.6%"
   },
   {
    "id": "T11",
@@ -92,7 +92,7 @@
    "id": "T15",
    "nome": "Interface",
    "ok": true,
-   "det": "3 tamanhos × 27 estados: 4160 rótulos numa linha, 3572 alvos ≥ 44 px, 4420 textos com contraste mín 4.59:1 · 32 linhas da tabela × 3 tamanhos alcançadas em ≤ 2 toques · som 3 = teclado, som 12 = pads, amostra no som 2 = teclado afinado (880 Hz) · dobrar: interno → largo → externo sem perder estado"
+   "det": "3 tamanhos × 27 estados: 4151 rótulos numa linha, 3563 alvos ≥ 44 px, 4408 textos com contraste mín 4.59:1 · 32 linhas da tabela × 3 tamanhos alcançadas em ≤ 2 toques · som 3 = teclado, som 12 = pads, amostra no som 2 = teclado afinado (880 Hz) · dobrar: interno → largo → externo sem perder estado"
   },
   {
    "id": "T16",

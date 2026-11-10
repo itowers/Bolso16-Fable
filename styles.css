@@ -153,7 +153,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--link); outl
 .grade4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--vao); }
 .somb { --cor: var(--accent); flex-direction: column; gap: 0; height: 48px; padding: 0; font-size: 12px; min-width: 0; box-shadow: inset 0 -3px 0 var(--cor); }
 .somb small { font-size: 10px; color: var(--text2); } .somb[aria-pressed=true] small { color: var(--tinta); }
-#banner { position: absolute; z-index: 6; background: var(--card); border-radius: var(--r-card); box-shadow: inset 0 0 0 1.5px var(--accent), 0 8px 24px rgba(0, 0, 0, .6); padding: 0 6px 0 14px; display: flex; align-items: center; justify-content: space-between; font-size: 13px; }
+#banner { height: var(--alvo); margin-top: 2px; background: var(--card); border-radius: var(--r-ctl); box-shadow: inset 0 0 0 1.5px var(--accent); padding: 0 6px 0 14px; display: flex; align-items: center; justify-content: space-between; font-size: 13px; }
 #aviso { position: absolute; z-index: 9; left: 50%; transform: translateX(-50%); max-width: calc(100% - 24px); background: var(--fill2); border-radius: 18px; padding: 8px 14px; font-size: 13px; text-align: center; box-shadow: 0 6px 20px rgba(0, 0, 0, .6); pointer-events: none; }
 #atualiza { position: fixed; z-index: 20; left: 50%; transform: translateX(-50%); bottom: calc(16px + env(safe-area-inset-bottom)); height: var(--alvo); padding: 0 16px; border-radius: 22px; background: var(--fill2); color: var(--link); font-size: 15px; }
 

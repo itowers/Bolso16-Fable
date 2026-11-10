@@ -77,7 +77,7 @@ const ESTADOS = [ // [nome, preparo dentro da página]
     const lay = await p.evaluate(() => document.getElementById('app').dataset.layout); if (lay !== nome) falhas.push(`${nome}: layout "${lay}"`);
     // (a–d) medidas em cada estado da interface
     for (const [en, prep] of ESTADOS) {
-      await p.evaluate(`(${prep.toString()})(B16); B16.pinta();`); await p.waitForTimeout(40);
+      await p.evaluate(`(${prep.toString()})(B16); B16.pinta();`); await p.waitForTimeout(arg('--prints') ? 260 : 40);
       const m = await p.evaluate(medir); num.estados++; num.rot += m.rot; num.alvos += m.alvos; num.textos += m.textos; num.cmin = Math.min(num.cmin, m.cmin);
       for (const r of m.ruins) falhas.push(`${nome} · ${en} · ${r}`);
       if (arg('--prints') && ['Tocar teclado', 'Tocar pads', 'Sequência', 'Som', 'Bib kits', 'FX efeitos + REC', 'Perf teclado', 'Folha Tempo', 'Folha Tom', 'Folha Passo', 'Folha Editar', 'Folha Som na seq', 'Fonte synth', 'Master', 'Bib config'].includes(en)) { fs.mkdirSync(path.join(aqui, 'prints'), { recursive: true }); await p.screenshot({ path: path.join(aqui, 'prints', `${nome}-${en.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`) }); }
