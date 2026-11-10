@@ -2,7 +2,8 @@
 
 ## 1. Links
 
-**Não publicado.** A sessão não consegue criar `itowers/Bolso16-Fable` (só enxerga repositórios que já existem) e por isso não há link do GitHub Pages. O repositório está completo localmente, com o histórico de commits, e vai junto em `Bolso16-Fable.zip`. Assim que o repositório vazio existir no GitHub, é um `git push` e ligar o Pages na branch `main`.
+- Repositório: https://github.com/itowers/Bolso16-Fable
+- GitHub Pages: https://itowers.github.io/Bolso16-Fable/ — **precisa ser ligado à mão** em Settings › Pages › Branch `main`, pasta `/ (root)`. A sessão não tem permissão para ligar o Pages pela API.
 
 ## 2. Testes
 
@@ -55,7 +56,7 @@ Está no `README.md`, gerada de `testes/funcoes.json`, o mesmo arquivo que o T15
 
 ## 6. Desvios e simplificações
 
-- **Não publicado no GitHub nem no Pages** (bloqueio acima).
+- **GitHub Pages ainda não ligado** (precisa ser feito à mão, ver §1).
 - **Commits:** não ficou um por fase. Construí as fases juntas e só então fechei os testes.
 - **Testes só no Chrome**, não no WebKit.
 - **Pads 4×4:** fileiras de baixo = sons 9–16; fileiras de cima = fatias ou 8 afinações do som escolhido. A spec dizia tanto "pad = som" quanto "fatias nos pads"; essa foi a leitura mais simples que atende às duas.
@@ -83,7 +84,7 @@ Está no `README.md`, gerada de `testes/funcoes.json`, o mesmo arquivo que o T15
 
 | Critério | Nota | Por quê |
 |---|---|---|
-| Fidelidade à spec | 7 | Tudo da tabela existe e é testado, mas há as simplificações do §6 e a entrega não está publicada |
+| Fidelidade à spec | 7 | Tudo da tabela existe e é testado, mas há as simplificações do §6 e o Pages ainda não está ligado |
 | Precisão de tempo | 9 | Jitter de agendamento 0; polimetria sem deriva; falta medir no aparelho |
 | Som do kit de fábrica | 5 | Sintetizado e variado, mas não ouvi; o chimbal varia cerca de 11 dB de um toque a outro |
 | "Nada escondido" | 9 | 32 linhas em ≤ 2 toques nos 3 tamanhos; segurar só em REPT, Borracha, Fill e FX |
