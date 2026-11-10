@@ -1,0 +1,85 @@
+{
+ "app": "bolso16",
+ "v": 1,
+ "quando": "2026-01-01T00:00:00Z",
+ "estado": {
+  "v": 1,
+  "bpm": 110,
+  "swing": 20,
+  "padroes": [
+   {
+    "len": 16,
+    "notas": [
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {
+      "0": 1,
+      "4": 1,
+      "8": 1,
+      "12": 1
+     },
+     {
+      "4": true,
+      "12": true
+     },
+     {},
+     {
+      "0": 1,
+      "2": 1,
+      "4": 1,
+      "6": 1,
+      "8": 1,
+      "10": 1,
+      "12": 1,
+      "14": 1
+     },
+     {},
+     {},
+     {},
+     {}
+    ],
+    "travas": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     {
+      "6": {
+       "corte": 2500
+      }
+     },
+     null,
+     null,
+     null,
+     null
+    ]
+   }
+  ],
+  "master": {
+   "duck": {
+    "on": false
+   },
+   "dust": 0,
+   "vol": 0.9,
+   "dj": 0
+  },
+  "cfg": {
+   "met": "off"
+  }
+ },
+ "amostras": [],
+ "biblio": []
+}

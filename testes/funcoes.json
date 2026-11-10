@@ -1,0 +1,450 @@
+[
+ {
+  "funcao": "PLAY/STOP, REC",
+  "lugar": "Pílula",
+  "aba": "tocar",
+  "som": 0,
+  "toques": [],
+  "alvos": [
+   "#play",
+   "#rec"
+  ]
+ },
+ {
+  "funcao": "BPM −/+ (60–240), TAP, Swing −/+",
+  "lugar": "Folha Tempo",
+  "aba": "tocar",
+  "som": 0,
+  "toques": [
+   "#bpm"
+  ],
+  "alvos": [
+   "[data-id=bpmMenos]",
+   "[data-id=bpmMais]",
+   "[data-id=tap]",
+   "[data-id=swing]"
+  ]
+ },
+ {
+  "funcao": "Contagem antes do REC",
+  "lugar": "Folha Tempo",
+  "aba": "tocar",
+  "som": 0,
+  "toques": [
+   "#bpm"
+  ],
+  "alvos": [
+   "[data-id=contagem]"
+  ]
+ },
+ {
+  "funcao": "Metrônomo Desl. · No REC · Sempre",
+  "lugar": "Folha Tempo",
+  "aba": "tocar",
+  "som": 0,
+  "toques": [
+   "#bpm"
+  ],
+  "alvos": [
+   "[data-id=met]"
+  ]
+ },
+ {
+  "funcao": "REPT ao segurar o pad",
+  "lugar": "Folha Tempo",
+  "aba": "tocar",
+  "som": 0,
+  "toques": [
+   "#bpm"
+  ],
+  "alvos": [
+   "[data-id=rept]"
+  ]
+ },
+ {
+  "funcao": "Volume do metrônomo, fade de punch-in, calibração de latência",
+  "lugar": "Biblioteca › Config",
+  "aba": "bib",
+  "som": 0,
+  "toques": [
+   "[data-id=bibSub] [data-v=config]"
+  ],
+  "alvos": [
+   "[data-id=metVol]",
+   "[data-id=fade]",
+   "[data-id=latencia]",
+   "[data-id=calToque]"
+  ]
+ },
+ {
+  "funcao": "Desfazer volta (até 8), Borracha",
+  "lugar": "Linha do REC",
+  "aba": "tocar",
+  "som": 0,
+  "toques": [
+   "#rec"
+  ],
+  "alvos": [
+   "[data-id=desfazVolta]",
+   "[data-id=borracha]"
+  ]
+ },
+ {
+  "funcao": "Fill (linha do REC)",
+  "lugar": "Linha do REC",
+  "aba": "tocar",
+  "som": 0,
+  "toques": [
+   "#rec"
+  ],
+  "alvos": [
+   "[data-id=fillRec]"
+  ]
+ },
+ {
+  "funcao": "Fill (Tocar › FX)",
+  "lugar": "Tocar › FX",
+  "aba": "tocar",
+  "som": 0,
+  "toques": [
+   "[data-id=modo] [data-v=fx]"
+  ],
+  "alvos": [
+   "[data-id=fillFx]"
+  ]
+ },
+ {
+  "funcao": "Fill (Sequência)",
+  "lugar": "Sequência",
+  "aba": "seq",
+  "som": 0,
+  "toques": [],
+  "alvos": [
+   "[data-id=fillSeq]"
+  ]
+ },
+ {
+  "funcao": "Padrões 1–16",
+  "lugar": "Sequência (fileira)",
+  "aba": "seq",
+  "som": 0,
+  "toques": [],
+  "alvos": [
+   "[data-padrao='0']",
+   "[data-padrao='15']"
+  ]
+ },
+ {
+  "funcao": "Lista de sons do padrão, M e S, Mostrar os 16 sons",
+  "lugar": "Sequência",
+  "aba": "seq",
+  "som": 0,
+  "toques": [],
+  "alvos": [
+   ".slb",
+   ".sl .bt[aria-label^=Mudo]",
+   ".sl .bt[aria-label^=Solo]",
+   "[data-id=todosSons]"
+  ]
+ },
+ {
+  "funcao": "Ver Página · Tudo; Pág 1 · Pág 2…; Seguir",
+  "lugar": "Sequência",
+  "aba": "seq",
+  "som": 0,
+  "toques": [],
+  "alvos": [
+   "[data-id=ver]",
+   "[data-id=pags]",
+   "[data-id=seguir]"
+  ]
+ },
+ {
+  "funcao": "Comprimento 8/16/32/64",
+  "lugar": "Botão “N passos” na Sequência e Editar › Comprimento",
+  "aba": "seq",
+  "som": 0,
+  "toques": [
+   "[data-id=comprimento]"
+  ],
+  "alvos": [
+   "[data-id=comprSeg]"
+  ]
+ },
+ {
+  "funcao": "Copiar padrão para…, Limpar padrão, Cadeia Montar · Desfazer · Nova, Tocar em cadeia",
+  "lugar": "Folha Editar padrão",
+  "aba": "seq",
+  "som": 0,
+  "toques": [
+   "[data-id=editar]"
+  ],
+  "alvos": [
+   "[data-id=copiarPadrao]",
+   "[data-id=limparPadrao]",
+   "[data-id=cadeiaMontar]",
+   "[data-id=cadeiaDesfazer]",
+   "[data-id=cadeiaNova]",
+   "[data-id=cadeiaOn]"
+  ]
+ },
+ {
+  "funcao": "Comprimento e Divisão do som, Deslocar notas, Copiar som para…, Limpar som, Conduz a harmonia (PROG), Segue a harmonia",
+  "lugar": "Folha Som na sequência",
+  "aba": "seq",
+  "som": 1,
+  "toques": [
+   "[data-id=ajustarSom]"
+  ],
+  "alvos": [
+   "[data-id=somComp]",
+   "[data-id=somDiv]",
+   "[data-id=deslocar]",
+   "[data-id=copiarSom]",
+   "[data-id=limparSom]",
+   "[data-id=conduz]",
+   "[data-id=segue]"
+  ]
+ },
+ {
+  "funcao": "Repetir, Adiantar/atrasar, Quando tocar, Ligar à nota anterior, Efeito melódico, Como segue a harmonia, Som só neste passo, Trocar pelo acorde atual",
+  "lugar": "Folha Passo",
+  "aba": "seq",
+  "som": 0,
+  "toques": [
+   "[data-passo='0']"
+  ],
+  "alvos": [
+   "[data-id=pRat]",
+   "[data-id=pMicro]",
+   "[data-id=pCond]",
+   "[data-id=pTie]",
+   "[data-id=pMel]",
+   "[data-id=pTonal]",
+   "[data-id=pCorte]",
+   "[data-id=pTrocar]",
+   "[data-id=pApagar]"
+  ]
+ },
+ {
+  "funcao": "Teclado de 7 graus + joystick",
+  "lugar": "Tocar (sons 1–8)",
+  "aba": "tocar",
+  "som": 0,
+  "toques": [],
+  "alvos": [
+   "[data-tecla='0']",
+   "[data-tecla='6']",
+   "[data-joy='2']",
+   "[data-joy='0']"
+  ]
+ },
+ {
+  "funcao": "Estilos Acorde · Strum · Arp · Nota",
+  "lugar": "Tocar, logo abaixo do acorde",
+  "aba": "tocar",
+  "som": 0,
+  "toques": [],
+  "alvos": [
+   "[data-id=estilo]"
+  ]
+ },
+ {
+  "funcao": "Tom, escala, inversão, oitava, velocidade do strum, ajustes do arp",
+  "lugar": "Folha Tom e estilo",
+  "aba": "tocar",
+  "som": 0,
+  "toques": [
+   "[data-id=tom]"
+  ],
+  "alvos": [
+   "[data-id=tomStp]",
+   "[data-id=escala]",
+   "[data-id=inversao]",
+   "[data-id=oitava]",
+   "[data-id=strum]",
+   "[data-id=arpVel]",
+   "[data-id=arpOrdem]",
+   "[data-id=arpRitmo]",
+   "[data-id=arpAlc]"
+  ]
+ },
+ {
+  "funcao": "Pads 4×4",
+  "lugar": "Tocar (sons 9–16 + fatias)",
+  "aba": "tocar",
+  "som": 11,
+  "toques": [],
+  "alvos": [
+   "[data-pad='0']",
+   "[data-pad='15']"
+  ]
+ },
+ {
+  "funcao": "15 FX + “sem”, segurar/travar, gravar no padrão, apagar FX, FILT DJ",
+  "lugar": "Tocar › FX › Efeitos",
+  "aba": "tocar",
+  "som": 0,
+  "toques": [
+   "[data-id=modo] [data-v=fx]"
+  ],
+  "alvos": [
+   "[data-fx='0']",
+   "[data-fx='15']",
+   "[data-id=fxModo]",
+   "[data-id=fxGravar]",
+   "[data-id=fxApagar]",
+   "[data-id=filtDj]"
+  ]
+ },
+ {
+  "funcao": "Fita (vel, início, loop, filt)",
+  "lugar": "Tocar › FX › Fita",
+  "aba": "tocar",
+  "som": 0,
+  "toques": [
+   "[data-id=modo] [data-v=fx]",
+   "[data-id=fxSub] [data-v=fita]"
+  ],
+  "alvos": [
+   "[data-id=fitaVel]",
+   "[data-id=fitaLoop]",
+   "[data-id=fitaFilt]",
+   "[data-fx='0']"
+  ]
+ },
+ {
+  "funcao": "Looper PERF",
+  "lugar": "Tocar › Perf",
+  "aba": "tocar",
+  "som": 0,
+  "toques": [
+   "[data-id=modo] [data-v=perf]"
+  ],
+  "alvos": [
+   "[data-faixa='0']",
+   "[data-faixa='3']",
+   "[data-id=pfDesf]",
+   "[data-id=pfRefaz]",
+   "[data-id=pfX2]",
+   "[data-id=pfMeio]",
+   "[data-id=pfLimpar]",
+   "[data-id=pfSalvar]",
+   "[data-id=pfMute]",
+   "[data-id=pfFbMais]",
+   "[data-id=pfReamost]",
+   "[data-id=pfQ]"
+  ]
+ },
+ {
+  "funcao": "Fonte Synth · Amostra · CHOP · Textura, gravar do microfone, importar",
+  "lugar": "Som › Fonte",
+  "aba": "som",
+  "som": 0,
+  "toques": [
+   "[data-id=somSub] [data-v=fonte]"
+  ],
+  "alvos": [
+   "[data-id=fonte]",
+   "[data-id=gravar]",
+   "[data-id=importar]",
+   "[data-id=reamostrar]"
+  ]
+ },
+ {
+  "funcao": "Filtro e envelope, Insert, Estilo de voz, Duração/Drone, Ligado a outro som, Volume/Pan",
+  "lugar": "Som",
+  "aba": "som",
+  "som": 0,
+  "toques": [],
+  "alvos": [
+   "[data-id=ftipo]",
+   "[data-id=corte]",
+   "[data-id=a]",
+   "[data-id=r]",
+   "[data-id=vol]",
+   "[data-id=pan]",
+   "[data-id=insert]",
+   "[data-id=vozEstilo]",
+   "[data-id=duracao]",
+   "[data-id=ligado]"
+  ]
+ },
+ {
+  "funcao": "Duck, Saída (limitador + LIM, Dust, volume master)",
+  "lugar": "Som › Master",
+  "aba": "som",
+  "som": 0,
+  "toques": [
+   "[data-id=somSub] [data-v=master]"
+  ],
+  "alvos": [
+   "[data-id=duckOn]",
+   "[data-id=duckGat]",
+   "[data-id=duckProf]",
+   "[data-id=duckSolt]",
+   "[data-id=dust]",
+   "[data-id=volMaster]"
+  ]
+ },
+ {
+  "funcao": "Kits",
+  "lugar": "Biblioteca › Kits",
+  "aba": "bib",
+  "som": 0,
+  "toques": [],
+  "alvos": [
+   "[data-id=salvarKit]",
+   "[data-id=kitFabrica]"
+  ]
+ },
+ {
+  "funcao": "Padrões salvos",
+  "lugar": "Biblioteca › Padrões",
+  "aba": "bib",
+  "som": 0,
+  "toques": [
+   "[data-id=bibSub] [data-v=padroes]"
+  ],
+  "alvos": [
+   "[data-id=salvarPadrao]"
+  ]
+ },
+ {
+  "funcao": "Amostras",
+  "lugar": "Biblioteca › Amostr",
+  "aba": "bib",
+  "som": 0,
+  "toques": [
+   "[data-id=bibSub] [data-v=amostras]"
+  ],
+  "alvos": [
+   "#usoAmostras"
+  ]
+ },
+ {
+  "funcao": "Backup exportar/importar",
+  "lugar": "Biblioteca › Backup",
+  "aba": "bib",
+  "som": 0,
+  "toques": [
+   "[data-id=bibSub] [data-v=backup]"
+  ],
+  "alvos": [
+   "[data-id=exportar]",
+   "[data-id=importarBackup]"
+  ]
+ },
+ {
+  "funcao": "Ajuda",
+  "lugar": "Biblioteca › Ajuda",
+  "aba": "bib",
+  "som": 0,
+  "toques": [
+   "[data-id=bibSub] [data-v=ajuda]"
+  ],
+  "alvos": [
+   ".aj"
+  ]
+ }
+]

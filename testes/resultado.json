@@ -1,0 +1,110 @@
+{
+ "quando": "2026-11-10T17:19:55.586Z",
+ "navegador": "chrome 153.0.8010.12",
+ "ok": 17,
+ "total": 17,
+ "testes": [
+  {
+   "id": "T1",
+   "nome": "Hash de áudio",
+   "ok": true,
+   "det": "chrome 0d54cdf5a3928f13… = golden"
+  },
+  {
+   "id": "T2",
+   "nome": "Timing",
+   "ok": true,
+   "det": "33 notas · erro máx 0.930 ms (atraso fixo do limitador 6.5 ms)"
+  },
+  {
+   "id": "T3",
+   "nome": "Polimetria",
+   "ok": true,
+   "det": "A em 0 16 32 48 · B em 0 12 24 36 48 60 · coincidem no passo 49 · erro 0.0e+0 s"
+  },
+  {
+   "id": "T4",
+   "nome": "Jitter ao vivo",
+   "ok": true,
+   "det": "6 s · 49 passos · jitter máx 0.0000 ms · antecedência mín 31.0 ms · passos com <10 ms: 0 · shader webgl 181 quadros"
+  },
+  {
+   "id": "T5",
+   "nome": "Passo rico",
+   "ok": true,
+   "det": "✓ ratchet 3 = 3 ataques · ✓ tie = 0 ataque · ✓ 1:2 nas voltas 1,3,5 · ✓ FILL só na volta 3 · ✓ !FILL nas voltas 1,2,4,5,6 · ✓ 50%: fila = som (50/96 tocaram)"
+  },
+  {
+   "id": "T6",
+   "nome": "Latência",
+   "ok": true,
+   "det": "outputLatency 40 ms: toques 5→5 · 6+30→6 · 7−30→7 · 10+50→10 · 13−50→13 · (sem compensar, o toque do passo 5 +30 ms cairia no passo 6)"
+  },
+  {
+   "id": "T7",
+   "nome": "DUCK e limitador",
+   "ok": true,
+   "det": "duck 100%: -21.7 dB após o bumbo, -0.00 dB após a soltura · 16 sons no máximo: pico -0.68 dBFS"
+  },
+  {
+   "id": "T8",
+   "nome": "CHOP",
+   "ok": true,
+   "det": "8 fatias · erro máx de início 0.02 ms"
+  },
+  {
+   "id": "T9",
+   "nome": "Persistência",
+   "ok": true,
+   "det": "18 grupos de campos voltaram · backup v1 → v2: toca igual (hash idêntico) · recarregar o app: estado idêntico, amostra voltou · exportar/zerar/importar backup: ok"
+  },
+  {
+   "id": "T10",
+   "nome": "CPU",
+   "ok": true,
+   "det": "8 compassos · 16 sons · 1841 notas com ratchet · 15 FX + fita + dust + inserts: 2811 ms para 16.5 s de áudio = 17.0%"
+  },
+  {
+   "id": "T11",
+   "nome": "Acordes",
+   "ok": true,
+   "det": "I–vii° = C Dm Em F G Am Bdim · ↗ = dominante nas 7 teclas: true · 1ª inversão de C = E G C"
+  },
+  {
+   "id": "T12",
+   "nome": "Gravar acorde",
+   "ok": true,
+   "det": "C7 gravou [60,64,67,70] no(s) passo(s) 5 · swing 30%: toque 10 ms antes do passo 8 atrasado → passo 8"
+  },
+  {
+   "id": "T13",
+   "nome": "Efeitos melódicos",
+   "ok": true,
+   "det": "✓ Quebra 4 de Cmaj7 = 4 ataques (C E G B) · ✓ Rampa ↑ 6 = D E F G A B · ✓ Glide no meio do passo: 372 Hz (entre 262 e 523) · ✓ Salto início no passo 8: toca 1 2 3 4 5 6 7 8 1 2… · padrão troca no passo 33"
+  },
+  {
+   "id": "T14",
+   "nome": "Progressão e Arp",
+   "ok": true,
+   "det": "✓ baixo segue: C F G C · ✓ baixo ignora: C C C C · ✓ baixo quant: C C D C · ✓ Arp ↑ 1/16 alc 2 = C E G C' E' G' · erro máx 0.091 ms"
+  },
+  {
+   "id": "T15",
+   "nome": "Interface",
+   "ok": true,
+   "det": "3 tamanhos × 27 estados: 4160 rótulos numa linha, 3572 alvos ≥ 44 px, 4420 textos com contraste mín 4.59:1 · 32 linhas da tabela × 3 tamanhos alcançadas em ≤ 2 toques · som 3 = teclado, som 12 = pads, amostra no som 2 = teclado afinado (880 Hz) · dobrar: interno → largo → externo sem perder estado"
+  },
+  {
+   "id": "T16",
+   "nome": "PWA",
+   "ok": true,
+   "det": "manifest válido (standalone, 3 ícones) · service worker ativo, 21 arquivos em cache · abre offline depois da primeira carga"
+  },
+  {
+   "id": "T17",
+   "nome": "Padrões e cadeia",
+   "ok": true,
+   "det": "✓ troca armada no passo 6 entra no passo 17 · ✓ cadeia 16 › 32: P1×16 P2×32 P1×16 P2×32 · ✓ esticar 16→32 duplica (passos 1 6 17 22) · ✓ encurtar/esticar não perde nem duplica de novo (passos 1 6 17 31)"
+  }
+ ]
+}

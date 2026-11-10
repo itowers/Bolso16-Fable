@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><title>Bolso-16 · testes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{color-scheme:dark}body{margin:0;padding:16px;background:#000;color:#fff;font:15px/1.4 -apple-system,BlinkMacSystemFont,system-ui,sans-serif}
+h1{font-size:22px;margin:0 0 4px}p{color:rgba(235,235,245,.6);margin:4px 0 12px;font-size:13px}
+button{height:44px;padding:0 18px;border:0;border-radius:10px;background:#FF9F0A;color:#000;font:inherit;font-weight:600}
+#lista{margin-top:14px;display:flex;flex-direction:column;gap:6px}.t{background:#1C1C1E;border-radius:14px;padding:10px 12px}
+.t b{margin-right:8px}.ok b{color:#30D158}.falha b{color:#FF453A}.t small{display:block;color:rgba(235,235,245,.6);font-size:12px;margin-top:2px;word-break:break-word}
+#ferroTeste{width:120px;height:120px;background:#1C1C1E;border-radius:22px;float:right;margin-left:12px}
+</style>
+</head>
+<body>
+<canvas id="ferroTeste"></canvas>
+<h1>Bolso-16 · testes</h1>
+<p>T1–T14 e T17 rodam aqui (o T4 leva 30 s; use <code>?rapido</code> para 6 s). T15 e T16 rodam por <code>npm run teste</code>. Usa um banco separado e não mexe nos seus sons. <code>?atualizar=1</code> mostra o novo hash do golden.</p>
+<button id="rodar" type="button">Rodar testes</button> <span id="andamento"></span>
+<div id="lista"></div>
+<script type="module">
+import { rodaTestes } from './testes/testes.js';
+const lista = document.getElementById('lista'), and = document.getElementById('andamento');
+window.aoTestar = r => { const d = document.createElement('div'); d.className = 't ' + (r.ok ? 'ok' : 'falha'); d.innerHTML = `<b>${r.ok ? 'OK' : 'FALHA'}</b>${r.id} · ${r.nome}<small></small>`; d.querySelector('small').textContent = r.det; lista.append(d); console.log(`${r.ok ? 'OK   ' : 'FALHA'} ${r.id} ${r.nome}: ${r.det}`); };
+async function roda() {
+  lista.replaceChildren(); and.textContent = 'rodando…';
+  const q = new URLSearchParams(location.search).get('so'), R = await rodaTestes(q ? q.split(',') : undefined), ok = R.filter(r => r.ok).length;
+  and.textContent = `${ok}/${R.length} OK`; console.log(`RESUMO: ${ok}/${R.length} OK`); window.resultado = R;
+}
+document.getElementById('rodar').onclick = roda;
+if (new URLSearchParams(location.search).has('auto')) roda();
+</script>
+</body>
+</html>

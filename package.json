@@ -1,0 +1,7 @@
+{
+  "name": "bolso16-fable",
+  "private": true,
+  "type": "module",
+  "scripts": { "teste": "node testes/run.mjs", "servir": "node testes/servidor.mjs" },
+  "devDependencies": { "playwright": "1.63.0" }
+}
