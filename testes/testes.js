@@ -68,7 +68,8 @@ const T = {
     const E = novoEstado(); E.bpm = 120; E.master.vol = .02; const M = new Motor(ctx, E, new Map(), {}), rel = new Relogio(ctx, M, E, {});
     const cv = document.getElementById('ferroTeste'), fe = cv ? new Ferro(cv) : null; let vivo = true, quadros = 0;
     const anim = () => { if (!vivo) return; quadros++; const e = rel.atual(); if (e && fe) { fe.nivel(M.nivel() * 20); if (e.tb !== anim.u) { anim.u = e.tb; fe.nota(60 + e.passo, '#FF9F0A'); if (e.passo % 4 === 0) fe.batida(); } const x = document.getElementById('andamento'); if (x) x.textContent = `T4: passo ${e.n + 1}`; } requestAnimationFrame(anim); };
-    if (fe) fe.setTocando(true); rel.liga(); rel.play(); requestAnimationFrame(anim);
+    if (fe) { fe.setTocando(true); fe.nota(60, '#FF9F0A'); await new Promise(r => setTimeout(r, 400)); } // compila o shader antes de medir
+    rel.liga(); rel.play(); requestAnimationFrame(anim);
     await new Promise(r => setTimeout(r, seg * 1000));
     const st = rel.stats; vivo = false; rel.stop(); rel.desliga(); if (fe) fe.setTocando(false); await ctx.close();
     const esperado = seg * 8;
