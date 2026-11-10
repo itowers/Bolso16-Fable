@@ -2,7 +2,7 @@
 
 ## 1. Links
 
-**Não publicado.** A sessão não consegue criar `itowers/Bolso16-Fable` (só enxerga repositórios que já existem) e por isso não há link do GitHub Pages. O repositório está completo localmente, com 5 commits, e vai junto em `Bolso16-Fable.zip`. Assim que o repositório vazio existir no GitHub, é um `git push` e ligar o Pages na branch `main`.
+**Não publicado.** A sessão não consegue criar `itowers/Bolso16-Fable` (só enxerga repositórios que já existem) e por isso não há link do GitHub Pages. O repositório está completo localmente, com o histórico de commits, e vai junto em `Bolso16-Fable.zip`. Assim que o repositório vazio existir no GitHub, é um `git push` e ligar o Pages na branch `main`.
 
 ## 2. Testes
 
@@ -56,7 +56,7 @@ Está no `README.md`, gerada de `testes/funcoes.json`, o mesmo arquivo que o T15
 ## 6. Desvios e simplificações
 
 - **Não publicado no GitHub nem no Pages** (bloqueio acima).
-- **Commits:** 5, não um por fase. Construí as fases juntas e só então fechei os testes.
+- **Commits:** não ficou um por fase. Construí as fases juntas e só então fechei os testes.
 - **Testes só no Chrome**, não no WebKit.
 - **Pads 4×4:** fileiras de baixo = sons 9–16; fileiras de cima = fatias ou 8 afinações do som escolhido. A spec dizia tanto "pad = som" quanto "fatias nos pads"; essa foi a leitura mais simples que atende às duas.
 - **FX:** os 15 listados + "Sem" ocupam as 16 teclas; não há os "3 à escolha". Gate e filtro varrido só agem com o padrão tocando.
